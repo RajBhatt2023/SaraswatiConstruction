@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaraswatiConstruction.WebApi", "SaraswatiConstruction.WebApi\SaraswatiConstruction.WebApi.csproj", "{C17D9730-A62D-45FC-A461-311850BC6091}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaraswatiConstruction.Domain", "SaraswatiConstruction.Domain\SaraswatiConstruction.Domain.csproj", "{B06FFB26-E831-49A5-93C2-9C3046541AA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaraswatiConstruction.Infrastructure", "SaraswatiConstruction.Infrastructure\SaraswatiConstruction.Infrastructure.csproj", "{3E80DB4B-E7C7-4F3B-B028-81042E67A47A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaraswatiConstruction.Service", "SaraswatiConstruction.Service\SaraswatiConstruction.Service.csproj", "{B4DDEA87-A474-42B0-AF3C-188C438ED5F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaraswatiConstruction.Utility", "SaraswatiConstruction.Utility\SaraswatiConstruction.Utility.csproj", "{D9253883-8CA2-455C-8FCF-138FEF2C2B0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaraswatiConstruction.WebApplication", "SaraswatiConstruction.WebApplication\SaraswatiConstruction.WebApplication.csproj", "{1DAF924C-5A54-4863-8BEC-18CE735DF222}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C17D9730-A62D-45FC-A461-311850BC6091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17D9730-A62D-45FC-A461-311850BC6091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17D9730-A62D-45FC-A461-311850BC6091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17D9730-A62D-45FC-A461-311850BC6091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06FFB26-E831-49A5-93C2-9C3046541AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06FFB26-E831-49A5-93C2-9C3046541AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06FFB26-E831-49A5-93C2-9C3046541AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06FFB26-E831-49A5-93C2-9C3046541AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E80DB4B-E7C7-4F3B-B028-81042E67A47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E80DB4B-E7C7-4F3B-B028-81042E67A47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E80DB4B-E7C7-4F3B-B028-81042E67A47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E80DB4B-E7C7-4F3B-B028-81042E67A47A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4DDEA87-A474-42B0-AF3C-188C438ED5F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4DDEA87-A474-42B0-AF3C-188C438ED5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4DDEA87-A474-42B0-AF3C-188C438ED5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4DDEA87-A474-42B0-AF3C-188C438ED5F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9253883-8CA2-455C-8FCF-138FEF2C2B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9253883-8CA2-455C-8FCF-138FEF2C2B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9253883-8CA2-455C-8FCF-138FEF2C2B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9253883-8CA2-455C-8FCF-138FEF2C2B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DAF924C-5A54-4863-8BEC-18CE735DF222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAF924C-5A54-4863-8BEC-18CE735DF222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAF924C-5A54-4863-8BEC-18CE735DF222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAF924C-5A54-4863-8BEC-18CE735DF222}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
