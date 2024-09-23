@@ -1,22 +1,33 @@
-html {
-  font-size: 14px;
+.btn-color {
+    background-color: #0e1c36;
+    color: #fff;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.profile-image-pic {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+span.dot {
+    height: 100px;
+    width: 100px;
+    background-color: #f8f3f3;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+
+.cardbody-color {
+    background-color: #e3bc54;
 }
 
-body {
-  margin-bottom: 60px;
+a {
+    text-decoration: none;
 }
+
+.fa-user:before {
+    font-size: 95px !important;
+}
+    

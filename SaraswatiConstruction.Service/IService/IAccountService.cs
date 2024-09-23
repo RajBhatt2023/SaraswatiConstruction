@@ -8,5 +8,6 @@ namespace SaraswatiConstruction.Service.IService
 {
     public interface IAccountService
     {
+
     }
 }
