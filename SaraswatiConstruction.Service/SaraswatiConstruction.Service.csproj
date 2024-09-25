@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SaraswatiConstruction.Domain\SaraswatiConstruction.Domain.csproj" />
+    <ProjectReference Include="..\SaraswatiConstruction.Infrastructure\SaraswatiConstruction.Infrastructure.csproj" />
     <ProjectReference Include="..\SaraswatiConstruction.Utility\SaraswatiConstruction.Utility.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaraswatiConstruction.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace SaraswatiConstruction.Service.IService
 {
     public interface IAccountService
     {
-
+        public Task<Result> RegisterUser(UserDetail userDetail);
     }
 }

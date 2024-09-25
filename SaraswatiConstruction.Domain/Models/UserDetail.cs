@@ -1,4 +1,4 @@
-﻿namespace SaraswatiConstruction.WebApplication.Models
+﻿namespace SaraswatiConstruction.Domain.Models
 {
     public class UserDetail
     {

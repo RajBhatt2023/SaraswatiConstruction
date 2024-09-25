@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaraswatiConstruction.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace SaraswatiConstruction.Infrastructure.IRepository
 {
     public interface IAccountRepository
     {
+        public Task<Result> RegisterUser(UserDetail userDetail);
     }
 }
