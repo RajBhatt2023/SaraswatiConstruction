@@ -10,5 +10,7 @@ namespace SaraswatiConstruction.Service.IService
     public interface IAccountService
     {
         public Task<Result> RegisterUser(UserDetail userDetail);
+        public Task<Result> VerifyEmail(string? token);
+        public Task<UserDetail> Login(UserDetail userCredential);
     }
 }

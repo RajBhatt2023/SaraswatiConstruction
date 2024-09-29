@@ -2,7 +2,8 @@
 {
     public class Result
     {
-        public int? ResultCode { get; set; }
-        public string? ResultDescription { get; set; }
+        public string? id { get; set; }
+        public int? resultCode { get; set; }
+        public string? resultDescription { get; set; }
     }
 }

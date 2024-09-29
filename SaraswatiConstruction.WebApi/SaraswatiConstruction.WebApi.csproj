@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -15,6 +15,7 @@
     <ProjectReference Include="..\SaraswatiConstruction.Service\SaraswatiConstruction.Service.csproj" />
     <ProjectReference Include="..\SaraswatiConstruction.Domain\SaraswatiConstruction.Domain.csproj" />
     <ProjectReference Include="..\SaraswatiConstruction.Infrastructure\SaraswatiConstruction.Infrastructure.csproj" />
+    <ProjectReference Include="..\SaraswatiConstruction.Utility\SaraswatiConstruction.Utility.csproj" />
   </ItemGroup>
 
 </Project>

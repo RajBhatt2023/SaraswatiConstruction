@@ -112,7 +112,7 @@
     <div class="container">
         <div class="form-box">
             <h1>Registration Form</h1>
-            <form>
+            <form id="signUpForm">
                 <div class="input-row">
                     <input type="text" placeholder="First Name" id="txtFirstName" required>
                     <input type="text" placeholder="Last Name" id="txtLastName" required>
@@ -129,4 +129,4 @@
     </div>
 </body>
 </html>
-<script src="~/js/register.js"></script>
+<script src="~/js/register.js?v=@DateTime.Now.Ticks"></script>

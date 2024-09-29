@@ -42,6 +42,7 @@ namespace SaraswatiConstruction.Infrastructure.Repository
                     {
                         if (getResult.ResultCode == Convert.ToString(CommonConstants.Zero))
                         {
+                            result.Id = Convert.ToString(getResult.UserID);
                             result.ResultCode = Convert.ToInt32(getResult.ResultCode);
                             result.ResultDescription = Convert.ToString(getResult.ResultDescription);
                         }
@@ -69,5 +70,96 @@ namespace SaraswatiConstruction.Infrastructure.Repository
             }
             return result;
         }
+
+        public async Task<Result> VerifyEmail(int UserID)
+        {
+            Result result = new Result();
+            try
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserID", UserID);
+
+                var dbResult = await _dataAccessHelper.ExecuteStoredProcedureDataTableAsync<dynamic>("Api_Account_VerifyEmail", parameters);
+
+                if (dbResult != null && dbResult.Any())
+                {
+                    var getResult = dbResult.FirstOrDefault();
+                    if (getResult != null)
+                    {
+                        if (getResult.ResultCode == Convert.ToString(CommonConstants.Zero))
+                        {
+                            
+                            result.ResultCode = Convert.ToInt32(getResult.ResultCode);
+                            result.ResultDescription = Convert.ToString(getResult.ResultDescription);
+                        }
+                        else
+                        {
+                            result.ResultCode = Convert.ToInt32(getResult.ResultCode);
+                            result.ResultDescription = Convert.ToString(getResult.ResultDescription);
+                        }
+                    }
+                    else
+                    {
+                        result.ResultCode = CommonConstants.One;
+                        result.ResultDescription = Messages.FailedToVerifyEmail;
+                    }
+                }
+                else
+                {
+                    result.ResultCode = CommonConstants.One;
+                    result.ResultDescription = Messages.FailedToVerifyEmail;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            return result;
+        }
+
+        public async Task<UserDetail> Login(UserDetail userCredential)
+        {
+            UserDetail userDetail = new UserDetail();
+            try
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Email", userCredential.Email);
+                var dbResult = await _dataAccessHelper.ExecuteStoredProcedureDataTableAsync<dynamic>("Api_Account_GetUserByEmail", parameters);
+                if (dbResult != null && dbResult.Any())
+                {
+                    var getResult = dbResult.FirstOrDefault();
+                    if (getResult != null)
+                    {
+                        if (getResult.ResultCode == Convert.ToString(CommonConstants.Zero))
+                        {
+                            userDetail.Password = CommonFunctions.DecryptPassword(getResult.HashPassword);
+                            userDetail.ResultCode = Convert.ToInt32(getResult.ResultCode);
+                            userDetail.ResultDescription = Convert.ToString(getResult.ResultDescription);
+                        }
+                        else
+                        {
+                            userDetail.ResultCode = Convert.ToInt32(getResult.ResultCode);
+                            userDetail.ResultDescription = Convert.ToString(getResult.ResultDescription);
+                        }
+                    }
+                    else
+                    {
+                        userDetail.ResultCode = CommonConstants.Two;
+                        userDetail.ResultDescription = Messages.FailedToRegister;
+                    }
+                }
+                else
+                {
+                    userDetail.ResultCode = CommonConstants.Two;
+                    userDetail.ResultDescription = Messages.FailedToRegister;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            return userDetail;
+        }
+
     }
 }

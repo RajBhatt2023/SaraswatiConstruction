@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SaraswatiConstruction.Domain.GlobalResource {
+namespace SaraswatiConstruction.WebApplication.Shared {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SaraswatiConstruction.Domain.GlobalResource {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SaraswatiConstruction.Domain.GlobalResource.Messages", typeof(Messages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SaraswatiConstruction.WebApplication.Shared.Messages", typeof(Messages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,43 +61,16 @@ namespace SaraswatiConstruction.Domain.GlobalResource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Token is corrupted..
+        ///   Looks up a localized string similar to Sorry, we couldn&apos;t complete your request due to a database issue..
         /// </summary>
-        public static string CorruptedToken {
+        public static string DatabaseIssue {
             get {
-                return ResourceManager.GetString("CorruptedToken", resourceCulture);
+                return ResourceManager.GetString("DatabaseIssue", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred:.
-        /// </summary>
-        public static string Error500 {
-            get {
-                return ResourceManager.GetString("Error500", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to register User!.
-        /// </summary>
-        public static string FailedToRegister {
-            get {
-                return ResourceManager.GetString("FailedToRegister", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to verify email!.
-        /// </summary>
-        public static string FailedToVerifyEmail {
-            get {
-                return ResourceManager.GetString("FailedToVerifyEmail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please fill out the mandatory fields!.
+        ///   Looks up a localized string similar to One or more input is null by application!.
         /// </summary>
         public static string Null_Input {
             get {
@@ -106,29 +79,11 @@ namespace SaraswatiConstruction.Domain.GlobalResource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Something wrong to send mail!.
+        ///   Looks up a localized string similar to Something went wrong in application. Please try again..
         /// </summary>
-        public static string SomethingWrongtoSendMail {
+        public static string SomethingWrong {
             get {
-                return ResourceManager.GetString("SomethingWrongtoSendMail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Token is expired!.
-        /// </summary>
-        public static string TokenExpired {
-            get {
-                return ResourceManager.GetString("TokenExpired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Token is valid..
-        /// </summary>
-        public static string ValidToken {
-            get {
-                return ResourceManager.GetString("ValidToken", resourceCulture);
+                return ResourceManager.GetString("SomethingWrong", resourceCulture);
             }
         }
     }

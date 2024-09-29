@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SaraswatiConstruction.WebApplication.Models;
+using SaraswatiConstruction.WebApplication.Shared;
+using System.Net;
 using System.Text;
 using System.Text.Json;
+using System.Web;
 
 namespace SaraswatiConstruction.WebApplication.Controllers.Account
 {
@@ -10,11 +13,11 @@ namespace SaraswatiConstruction.WebApplication.Controllers.Account
 
         HttpClient _client;
 
-        public AccountController(IConfiguration configuration, ILogger<AccountController> logger)
+        public AccountController(IConfiguration _configuration, ILogger<AccountController> logger)
         {
             _client = new HttpClient()
             {
-                BaseAddress = new Uri("https://localhost:7150/Account/")
+                BaseAddress = new Uri(_configuration["APIUrl"] + AppConstants.Account)
             };
 
 
@@ -23,23 +26,43 @@ namespace SaraswatiConstruction.WebApplication.Controllers.Account
         {
             return View();
         }
-        public IActionResult LogIn()
+        public IActionResult Login()
         {
             return View();
         }
+
         [HttpPost]
-        public IActionResult LogIn(UserDetail userDetail)
+        public async Task<JsonResult> Login(UserDetail UserCredential)
         {
-            if (userDetail.Email == "rajeev@test.com" && userDetail.Password == "Rajeev@123")
+            UserDetailResult? result = new UserDetailResult();
+            try
             {
-                // Redirect to the Dashboard action of the DashboardController
-                return RedirectToAction("Dashboard", "Dashboard");
+                var data = JsonSerializer.Serialize(UserCredential);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+
+                var response = await _client.PostAsync($"{_client.BaseAddress}Login", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    result = JsonSerializer.Deserialize<UserDetailResult>(apiResponse);
+
+                }
+                else if (response.StatusCode == HttpStatusCode.InternalServerError)
+                {
+                    result = new UserDetailResult { resultCode = 500, resultDescription = Messages.DatabaseIssue };
+                }
+                else
+                {
+                    result = new UserDetailResult { resultCode = 2, resultDescription = Messages.SomethingWrong };
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ViewBag.Message = "Invalid email or password.";
-                return View();
+                throw new Exception(ex.ToString());
             }
+
+            return Json(result);
         }
 
 
@@ -48,12 +71,52 @@ namespace SaraswatiConstruction.WebApplication.Controllers.Account
         {
             return View();
         }
-
-
         public IActionResult Register()
         {
             return View();
         }
+
+        public async Task<IActionResult> VerifyEmail(string token)
+        {
+            TempData["HideNavbar"] = "HideNavbar";
+
+            if (token != null)
+            {
+                try
+                {
+                    var activateToken = token;
+                    token = HttpUtility.UrlEncode(token);
+                    var response = await _client.GetAsync($"{_client.BaseAddress}{AppConstants.VerifyEmail}{token}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        Result? result = JsonSerializer.Deserialize<Result>(content);
+                        if (result?.resultCode == 0)
+                        {
+                            ViewData["UserID"] = result.id;
+                            ViewData["Message"] = result.resultDescription;
+
+                        }
+                        else
+                        {
+                            ViewData["Message"] = result.resultDescription;
+                        }
+                    }
+                    else
+                    {
+                        ViewData["Message"] = "Something is Wrong!";
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+            }
+            return View();
+        }
+
 
         [HttpPost]
         public async Task<JsonResult> Registration(UserDetail userDetail)
@@ -66,7 +129,7 @@ namespace SaraswatiConstruction.WebApplication.Controllers.Account
 
                     StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
 
-                    var response = await _client.PostAsync($"{_client.BaseAddress}" + "Registration", content);
+                    var response = await _client.PostAsync($"{_client.BaseAddress}Registration", content);
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -75,13 +138,23 @@ namespace SaraswatiConstruction.WebApplication.Controllers.Account
 
                         return Json(result);
                     }
+                    else if (response.StatusCode == HttpStatusCode.InternalServerError)
+                    {
+                        Result errorResult = new Result { resultCode = 500, resultDescription = Messages.DatabaseIssue };
+                        return Json(errorResult);
+                    }
                     else
                     {
-                        return Json("");
+                        Result errorResult = new Result { resultCode = 2, resultDescription = Messages.SomethingWrong };
+                        return Json(errorResult);
                     }
 
                 }
-                else { return Json(""); }
+                else
+                {
+                    Result errorResult = new Result { resultCode = 1, resultDescription = Messages.Null_Input };
+                    return Json(errorResult);
+                }
             }
             catch (Exception ex)
             {

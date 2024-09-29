@@ -10,5 +10,7 @@ namespace SaraswatiConstruction.Infrastructure.IRepository
     public interface IAccountRepository
     {
         public Task<Result> RegisterUser(UserDetail userDetail);
+        public Task<Result> VerifyEmail(int UserID);
+        public Task<UserDetail> Login(UserDetail userCredential);
     }
 }

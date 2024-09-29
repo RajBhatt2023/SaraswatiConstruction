@@ -57,7 +57,7 @@ namespace SaraswatiConstruction.Utility
             {
                 if (!String.IsNullOrEmpty(encryptedToken))
                 {
-                    var encryptedBytes = encryptedToken.Replace(CommonConstants .Minus, CommonConstants .Plus).Replace(CommonConstants.Underscore, CommonConstants.Slash);
+                    var encryptedBytes = encryptedToken.Replace(CommonConstants.Minus, CommonConstants.Plus).Replace(CommonConstants.Underscore, CommonConstants.Slash);
                     using var aes = Aes.Create();
                     aes.Key = Encoding.UTF8.GetBytes(SecretKey);
                     aes.IV = Encoding.UTF8.GetBytes(IV);
@@ -173,6 +173,13 @@ namespace SaraswatiConstruction.Utility
             }
         }
 
-
+        public static string GenerateToken(string? Id)
+        {
+            var token = Convert.ToString(Guid.NewGuid());
+            var expirationDate = Convert.ToString(DateTime.UtcNow.AddMinutes(5));
+            var tokenString = $"{Id}:{token}:{expirationDate}";
+            var encryptedToken = CommonFunctions.Encrypt(tokenString);
+            return encryptedToken;
+        }
     }
 }

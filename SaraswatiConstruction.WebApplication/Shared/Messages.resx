@@ -117,28 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CorruptedToken" xml:space="preserve">
-    <value>Token is corrupted.</value>
-  </data>
-  <data name="Error500" xml:space="preserve">
-    <value>An error occurred:</value>
-  </data>
-  <data name="FailedToRegister" xml:space="preserve">
-    <value>Failed to register User!</value>
-  </data>
-  <data name="FailedToVerifyEmail" xml:space="preserve">
-    <value>Failed to verify email!</value>
+  <data name="DatabaseIssue" xml:space="preserve">
+    <value>Sorry, we couldn't complete your request due to a database issue.</value>
   </data>
   <data name="Null_Input" xml:space="preserve">
-    <value>Please fill out the mandatory fields!</value>
+    <value>One or more input is null by application!</value>
   </data>
-  <data name="SomethingWrongtoSendMail" xml:space="preserve">
-    <value>Something wrong to send mail!</value>
-  </data>
-  <data name="TokenExpired" xml:space="preserve">
-    <value>Token is expired!</value>
-  </data>
-  <data name="ValidToken" xml:space="preserve">
-    <value>Token is valid.</value>
+  <data name="SomethingWrong" xml:space="preserve">
+    <value>Something went wrong in application. Please try again.</value>
   </data>
 </root>
