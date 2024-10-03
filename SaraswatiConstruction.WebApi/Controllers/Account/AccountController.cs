@@ -45,6 +45,7 @@ namespace SaraswatiConstruction.WebApi.Controllers.Account
                 return StatusCode(500, Messages.Error500 + ex.Message);
             }
         }
+
         [HttpGet("VerifyEmail")]
         public async Task<IActionResult> VerifyEmail(string? token)
         {
