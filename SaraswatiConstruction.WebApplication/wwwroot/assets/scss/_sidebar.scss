@@ -33,11 +33,15 @@
         white-space: nowrap;
         padding: $sidebar-menu-padding-top $sidebar-menu-padding-right $sidebar-menu-padding-bottom $sidebar-menu-padding-left;
         color: $sidebar-light-menu-color;
-        border-radius: 8px;
         @include transition-duration(0.45s);
         transition-property: color;
         -webkit-transition-property: color;
-
+        font-weight: 400;
+        border-radius: 0px 20px 20px 0px;
+      
+        @media (max-width: 991px) {
+          border-radius: 0;
+        }
         i {
           color: inherit;
 
@@ -66,13 +70,14 @@
             }
 
             &:before {
-              content: "\e649";
-              font-family: "themify";
+              content: "\f0140";
+              font-family: "Material Design Icons";
               font-style: normal;
               display: block;
-              font-size: 0.687rem;
+              font-size: 1.25rem;
               line-height: 10px;
               @include transition(all .2s ease-in);
+              font-weight: normal;
             }
           }
         }
@@ -96,29 +101,47 @@
           i {
             &.menu-arrow {
               &:before {
-                @include rotate(90);
+                @include rotate(180);
               }
             }
           }
         }
+        
       }
 
       &.active {
-        border-radius: 8px;
         > .nav-link {
+            border-radius: 0px 20px 0px 0px;
             background: $sidebar-light-menu-active-bg;
             position: relative;
+            font-weight: bold;
+            font-size: 13px;
             i,
             .menu-title,
             .menu-arrow {
               color: $sidebar-light-menu-active-color;
+              .purple & {
+                color: $sidebar-purple-active-color;
+              }
+            }
+            .menu-title {
+             font-size: 15px;
             }
             i {
               &.menu-arrow {
                 &::before {
-                  content: "\e64b";
-                }
+                  content: "\F0140";
+                } 
               }
+            }
+            &[aria-expanded="true"] {
+              border-radius: 0px 20px 0px 0px;
+            }
+            &[aria-expanded="false"] {
+              border-radius: 0px 20px 0px 0px;
+            }
+            &.collapsed {
+              border-radius: 0px 20px 20px 0px !important;
             }
         }
       }
@@ -132,15 +155,28 @@
         }
 
       }
+      &.nav-category {
+        color: $sidebar-light-category-color;
+        border-bottom: 1px solid $sidebar-nav-category-border-color;
+        margin: 0 30px;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 20px 0px 5px 0px;
+        text-transform: uppercase;
+        .sidebar-dark & {
+          color: $sidebar-dark-category-color;
+          border-bottom: none;
+        }
+      }
     }
 
     &:not(.sub-menu) {
-      margin-top: 1.45rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
       > .nav-item {
         margin-top: .2rem;
-        &:hover { 
+        &:hover {
           > .nav-link, &[aria-expanded="true"] {
             background: $sidebar-light-menu-hover-bg;
             color: $sidebar-light-menu-hover-color;                    
@@ -152,10 +188,20 @@
             border-radius: 8px 8px 0 0;
             background: $sidebar-light-menu-hover-bg;
             color: $sidebar-light-menu-active-color;
+            border-radius: 0px 20px 0px 0px;
           }
         }
         &.active {
-          background: $sidebar-light-menu-hover-bg;
+          background: transparent;
+          .nav-link {
+            border-radius: 0px 20px 20px 0px;
+            &[aria-expanded="true"] {
+              border-radius: 0px 20px 0px 0px;
+            }
+            &[aria-expanded="false"] {
+              border-radius: 0px 20px 0px 0px;
+            }
+          }
         }
       }
     }
@@ -166,6 +212,7 @@
       padding: $sidebar-submenu-padding;
       background: $sidebar-light-menu-hover-bg;
       padding-bottom: 12px;
+      border-radius: 0px 0px 20px 0px;
 
       .nav-item {
         position: relative;
@@ -180,22 +227,22 @@
           background: #b2b2b2;
         }
         .nav-link {
-          // color: $sidebar-light-submenu-color;
-          color: #b9b8ee;
+          color: $sidebar-light-submenu-color;
           padding: $sidebar-submenu-item-padding;
           position: relative;
           font-size: $sidebar-submenu-font-size;
           line-height: 1;
           height: auto;
           border-top: 0;
-          font-weight: 400;
           &:hover {
             color: $sidebar-light-submenu-hover-color;
           }
           &.active {
             color: $sidebar-light-submenu-active-color;
-            font-weight: 900;
             background: transparent;
+            .purple & {
+              color: $sidebar-purple-active-color;
+            }
           }
         }
         &:hover {
@@ -205,6 +252,7 @@
     }
   }
 }
+
 //sidebar color variation
 .sidebar-dark {
   .sidebar {
@@ -213,6 +261,10 @@
       .nav-item {
         .nav-link {
           color: $sidebar-dark-menu-color;
+          position: relative;
+          .sidebar-icon-only {
+            color: $dark;
+          }
           i {
             color: inherit;
             &.menu-icon {
@@ -231,6 +283,15 @@
         &.active {
           > .nav-link {
             background: $sidebar-dark-menu-active-bg;
+            &:before {
+              content: '';
+              width: 2px;
+              height: 100%;
+              background: $white;
+              left: 0;
+              top:0;
+              position: absolute;
+            }
             .menu-title,
             i {
               color: $sidebar-dark-menu-active-color; 
@@ -243,12 +304,25 @@
           &:hover {
             > .nav-link {
               background: $sidebar-dark-menu-hover-bg;
-              color: $sidebar-dark-menu-hover-color;                                    
+              color: $sidebar-dark-menu-hover-color;  
+              &:before {
+                content: '';
+                width: 2px;
+                height: 100%;
+                background: $white;
+                left: 0;
+                top:0;
+                position: absolute;
+              }  
+              .menu-arrow {
+                color: $sidebar-dark-menu-hover-color;
+              }                                
             }
           }
           .nav-link {
             &[aria-expanded="true"] {
               background: #1a1f26;
+              color: $white;
             }
           }
         }
@@ -264,6 +338,7 @@
             &.active {
               color: $sidebar-dark-menu-active-color;
               background: transparent;
+              font-weight: 900;
             }
             &:hover {
               color: $sidebar-dark-submenu-hover-color;

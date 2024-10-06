@@ -1,172 +1,23 @@
-﻿@* <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
-<link href="~/css/dashboard.css" rel="stylesheet" />
-<div class="container">
-    <div class="header">
-        <div class="header-logo">
-            <svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M512 256a15 15 0 00-7.1-12.8l-52-32 52-32.5a15 15 0 000-25.4L264 2.3c-4.8-3-11-3-15.9 0L7 153.3a15 15 0 000 25.4L58.9 211 7.1 243.3a15 15 0 000 25.4L58.8 301 7.1 333.3a15 15 0 000 25.4l241 151a15 15 0 0015.9 0l241-151a15 15 0 00-.1-25.5l-52-32 52-32.5A15 15 0 00512 256zM43.3 166L256 32.7 468.7 166 256 298.3 43.3 166zM468.6 346L256 479.3 43.3 346l43.9-27.4L248 418.7a15 15 0 0015.8 0L424.4 319l44.2 27.2zM256 388.3L43.3 256l43.9-27.4L248 328.7a15 15 0 0015.8 0L424.4 229l44.1 27.2L256 388.3z" />
-            </svg>
-            <span class="site-title">Layerz</span>
-        </div>
-        <div class="header-search">
-            <button class="button-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385 385">
-                    <path d="M12 120.3h361a12 12 0 000-24H12a12 12 0 000 24zM373 180.5H12a12 12 0 000 24h361a12 12 0 000-24zM373 264.7H132.2a12 12 0 000 24H373a12 12 0 000-24z" />
-                </svg>
-            </button>
-            <input type="search" placeholder="Search Documentation..." />
-        </div>
-    </div>
-    <div class="main">
-        <div class="sidebar">
-            <ul>
-                <li><a href="#" class="active"><i class="lni lni-home"></i><span>Dashboard</span></a></li>
-                <li><a href="#"><i class="lni lni-text-format"></i><span>Form Elements</span></a></li>
-                <li><a href="#"><i class="lni lni-bar-chart"></i><span>Charts</span></a></li>
-                <li><a href="#"><i class="lni lni-grid"></i><span>Grid System</span></a></li>
-                <li><a href="#"><i class="lni lni-bullhorn"></i><span>Notifications</span></a></li>
-                <li><a href="#"><i class="lni lni-support"></i><span>Help & Support</span></a></li>
-            </ul>
-        </div>
-        <div class="page-content">
-            <h1>Welcome back, John!</h1>
-        </div>
-    </div>
-</div>
-<script src="~/js/dashboard.js"></script> *@
-
-
-@* Dasboard C *@
-
-@* <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-<link href="~/css/dashboard.css" rel="stylesheet" />
-<div class="wrapper">
-    <aside id="sidebar">
-        <div class="d-flex">
-            <button class="toggle-btn" type="button">
-                <i class="lni lni-grid-alt"></i>
-            </button>
-            <div class="sidebar-logo">
-                <a href="#">CodzSword</a>
-            </div>
-        </div>
-        <ul class="sidebar-nav">
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <i class="lni lni-user"></i>
-                    <span>Profile</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <i class="lni lni-agenda"></i>
-                    <span>Task</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                   data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                    <i class="lni lni-protection"></i>
-                    <span>Auth</span>
-                </a>
-                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">Login</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">Register</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                   data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
-                    <i class="lni lni-layout"></i>
-                    <span>Multi Level</span>
-                </a>
-                <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                           data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
-                            Two Links
-                        </a>
-                        <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Link 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Link 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <i class="lni lni-popup"></i>
-                    <span>Notification</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <i class="lni lni-cog"></i>
-                    <span>Setting</span>
-                </a>
-            </li>
-        </ul>
-        <div class="sidebar-footer">
-            <a href="#" class="sidebar-link">
-                <i class="lni lni-exit"></i>
-                <span>Logout</span>
-            </a>
-        </div>
-    </aside>
-    <div class="main p-3">
-        <div class="text-center">
-            <h1>
-                Dashboard page
-            </h1>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-<script src="~/js/dashboard.js"></script>
- *@
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Skydash Admin</title>
+    <title>Star Admin2 </title>
     <!-- plugins:css -->
+    <link href="~/assets/vendors/feather/feather.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/assets/vendors/feather/feather.css">
-    <link rel="stylesheet" href="~/assets/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="~/assets/vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="~/assets/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/typicons/typicons.css">
+    <link rel="stylesheet" href="~/assets/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <!-- <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css"> -->
-    <link rel="stylesheet" href="~/assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="~/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="~/assets/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
@@ -174,95 +25,184 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="~/assets/images/favicon.png" />
 </head>
-<body>
+<body class="with-welcome-text">
     <div class="container-scroller">
-
-        <!-- partial:partials/_navbar.html -->
-        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
-                <a class="navbar-brand brand-logo me-5" href="index.html"><img src="~/assets/images/logo.svg" class="me-2" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/assets/images/logo-mini.svg" alt="logo" /></a>
+        <div class="row p-0 m-0 proBanner" id="proBanner">
+            <div class="col-md-12 p-0 m-0">
+                <div class="card-body card-body-padding px-3 d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="https://www.bootstrapdash.com/product/star-admin-pro/"><i class="ti-home me-3 text-white"></i></a>
+                        <button id="bannerClose" class="btn border-0 p-0">
+                            <i class="ti-close text-white"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                    <span class="icon-menu"></span>
-                </button>
-                <ul class="navbar-nav mr-lg-2">
-                    <li class="nav-item nav-search d-none d-lg-block">
-                        <div class="input-group">
-                            <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-                                <span class="input-group-text" id="search">
-                                    <i class="icon-search"></i>
-                                </span>
-                            </div>
-                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+        </div>
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+                <div class="me-3">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                        <span class="icon-menu"></span>
+                    </button>
+                </div>
+                <div>
+                    <a class="navbar-brand brand-logo" href="index.html">
+                        <img src="~/assets/images/logo.svg" alt="logo" />
+                    </a>
+                    <a class="navbar-brand brand-logo-mini" href="index.html">
+                        <img src="~/assets/images/logo-mini.svg" alt="logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-top">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"> Select Category </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+                            <a class="dropdown-item py-3">
+                                <p class="mb-0 fw-medium float-start">Select category</p>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-item-content flex-grow py-2">
+                                    <p class="preview-subject ellipsis fw-medium text-dark">Bootstrap Bundle </p>
+                                    <p class="fw-light small-text mb-0">This is a Bundle featuring 16 unique dashboards</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-item-content flex-grow py-2">
+                                    <p class="preview-subject ellipsis fw-medium text-dark">Angular Bundle</p>
+                                    <p class="fw-light small-text mb-0">Everything you’ll ever need for your Angular projects</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-item-content flex-grow py-2">
+                                    <p class="preview-subject ellipsis fw-medium text-dark">VUE Bundle</p>
+                                    <p class="fw-light small-text mb-0">Bundle of 6 Premium Vue Admin Dashboard</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-item-content flex-grow py-2">
+                                    <p class="preview-subject ellipsis fw-medium text-dark">React Bundle</p>
+                                    <p class="fw-light small-text mb-0">Bundle of 8 Premium React Admin Dashboard</p>
+                                </div>
+                            </a>
                         </div>
                     </li>
-                </ul>
-                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item d-none d-lg-block">
+                        <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+                            <span class="input-group-addon input-group-prepend border-right">
+                                <span class="icon-calendar input-group-text calendar-icon"></span>
+                            </span>
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <form class="search-form" action="#">
+                            <i class="icon-search"></i>
+                            <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+                        </form>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                            <i class="icon-bell mx-0"></i>
+                        <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                            <i class="icon-bell"></i>
                             <span class="count"></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-                            <a class="dropdown-item preview-item">
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
+                            <a class="dropdown-item py-3 border-bottom">
+                                <p class="mb-0 fw-medium float-start">You have 4 new notifications </p>
+                                <span class="badge badge-pill badge-primary float-end">View all</span>
+                            </a>
+                            <a class="dropdown-item preview-item py-3">
                                 <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-success">
-                                        <i class="ti-info-alt mx-0"></i>
-                                    </div>
+                                    <i class="mdi mdi-alert m-auto text-primary"></i>
                                 </div>
                                 <div class="preview-item-content">
-                                    <h6 class="preview-subject font-weight-normal">Application Error</h6>
-                                    <p class="font-weight-light small-text mb-0 text-muted"> Just now </p>
+                                    <h6 class="preview-subject fw-normal text-dark mb-1">Application Error</h6>
+                                    <p class="fw-light small-text mb-0"> Just now </p>
                                 </div>
                             </a>
-                            <a class="dropdown-item preview-item">
+                            <a class="dropdown-item preview-item py-3">
                                 <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-warning">
-                                        <i class="ti-settings mx-0"></i>
-                                    </div>
+                                    <i class="mdi mdi-lock-outline m-auto text-primary"></i>
                                 </div>
                                 <div class="preview-item-content">
-                                    <h6 class="preview-subject font-weight-normal">Settings</h6>
-                                    <p class="font-weight-light small-text mb-0 text-muted"> Private message </p>
+                                    <h6 class="preview-subject fw-normal text-dark mb-1">Settings</h6>
+                                    <p class="fw-light small-text mb-0"> Private message </p>
                                 </div>
                             </a>
-                            <a class="dropdown-item preview-item">
+                            <a class="dropdown-item preview-item py-3">
                                 <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-info">
-                                        <i class="ti-user mx-0"></i>
-                                    </div>
+                                    <i class="mdi mdi-airballoon m-auto text-primary"></i>
                                 </div>
                                 <div class="preview-item-content">
-                                    <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                                    <p class="font-weight-light small-text mb-0 text-muted"> 2 days ago </p>
+                                    <h6 class="preview-subject fw-normal text-dark mb-1">New user registration</h6>
+                                    <p class="fw-light small-text mb-0"> 2 days ago </p>
                                 </div>
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item nav-profile dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-                            <img src="~/assets/images/faces/face28.jpg" alt="profile" />
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-mail icon-lg"></i>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a class="dropdown-item">
-                                <i class="ti-settings text-primary"></i> Settings
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
+                            <a class="dropdown-item py-3">
+                                <p class="mb-0 fw-medium float-start">You have 7 unread mails </p>
+                                <span class="badge badge-pill badge-primary float-end">View all</span>
                             </a>
-                            <a class="dropdown-item" href="/Account/LogIn">
-                                <i class="ti-power-off text-primary"></i> Logout
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="~/assets/images/faces/face10.jpg" alt="image" class="img-sm profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow py-2">
+                                    <p class="preview-subject ellipsis fw-medium text-dark">Marian Garner </p>
+                                    <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="~/assets/images/faces/face12.jpg" alt="image" class="img-sm profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow py-2">
+                                    <p class="preview-subject ellipsis fw-medium text-dark">David Grey </p>
+                                    <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="~/assets/images/faces/face1.jpg" alt="image" class="img-sm profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow py-2">
+                                    <p class="preview-subject ellipsis fw-medium text-dark">Travis Jenkins </p>
+                                    <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                                </div>
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item nav-settings d-none d-lg-flex">
-                        <a class="nav-link" href="#">
-                            <i class="icon-ellipsis"></i>
+                    <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                        <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-xs rounded-circle" src="~/assets/images/faces/face8.jpg" alt="Profile image">
                         </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                <img class="img-md rounded-circle" src="~/assets/images/faces/face8.jpg" alt="Profile image">
+                                <p class="mb-1 mt-3 fw-semibold">Allen Moreno</p>
+                                <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+                            </div>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+                        </div>
                     </li>
                 </ul>
-                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-                    <span class="icon-menu"></span>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
                 </button>
             </div>
         </nav>
@@ -272,759 +212,825 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <i class="icon-grid menu-icon"></i>
+                        <a class="nav-link" href="/Dashboard/Dashboard">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/Vendor/VendorManagement">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
+                            <span class="menu-title">VendorManagement</span>
+                        </a>
+                    </li>   
+                    <li class="nav-item nav-category">UI Elements</li>
+                    <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <i class="icon-layout menu-icon"></i>
-                            <span class="menu-title">UserManagement</span>
+                            <i class="menu-icon mdi mdi-floor-plan"></i>
+                            <span class="menu-title">UI Elements</span>
                             <i class="menu-arrow"></i>
                         </a>
-                       
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/ui-features/buttons.html">Buttons</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/ui-features/typography.html">Typography</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-                            <i class="icon-columns menu-icon"></i>
+                            <i class="menu-icon mdi mdi-card-text-outline"></i>
                             <span class="menu-title">Form elements</span>
                             <i class="menu-arrow"></i>
                         </a>
-                        
+                        <div class="collapse" id="form-elements">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="~/pages/forms/basic_elements.html">Basic Elements</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                            <i class="icon-bar-graph menu-icon"></i>
+                            <i class="menu-icon mdi mdi-chart-line"></i>
                             <span class="menu-title">Charts</span>
                             <i class="menu-arrow"></i>
                         </a>
-                       
+                        <div class="collapse" id="charts">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/charts/chartjs.html">ChartJs</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-                            <i class="icon-grid-2 menu-icon"></i>
+                            <i class="menu-icon mdi mdi-table"></i>
                             <span class="menu-title">Tables</span>
                             <i class="menu-arrow"></i>
                         </a>
-                        
+                        <div class="collapse" id="tables">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/tables/basic-table.html">Basic table</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-                            <i class="icon-contract menu-icon"></i>
+                            <i class="menu-icon mdi mdi-layers-outline"></i>
                             <span class="menu-title">Icons</span>
                             <i class="menu-arrow"></i>
                         </a>
-                       
+                        <div class="collapse" id="icons">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/icons/font-awesome.html">Font Awesome</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                            <i class="icon-head menu-icon"></i>
+                            <i class="menu-icon mdi mdi-account-circle-outline"></i>
                             <span class="menu-title">User Pages</span>
                             <i class="menu-arrow"></i>
                         </a>
-                        
+                        <div class="collapse" id="auth">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/samples/blank-page.html"> Blank Page </a></li>
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/samples/error-404.html"> 404 </a></li>
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/samples/error-500.html"> 500 </a></li>
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/samples/login.html"> Login </a></li>
+                                <li class="nav-item"> <a class="nav-link" href="~/pages/samples/register.html"> Register </a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-                            <i class="icon-ban menu-icon"></i>
-                            <span class="menu-title">Error pages</span>
-                            <i class="menu-arrow"></i>
+                        <a class="nav-link" href="docs/documentation.html">
+                            <i class="menu-icon mdi mdi-file-document"></i>
+                            <span class="menu-title">Documentation</span>
                         </a>
-                       
                     </li>
-                   
                 </ul>
             </nav>
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="row">
-                        <div class="col-md-12 grid-margin">
-                            <div class="row">
-                                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                                    <h3 class="font-weight-bold">Welcome John</h3>
-                                    <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
-                                </div>
-                                <div class="col-12 col-xl-4">
-                                    <div class="justify-content-end d-flex">
-                                        <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                                            <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                <i class="mdi mdi-calendar"></i> Today (10 Jan 2021)
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                                                <a class="dropdown-item" href="#">January - March</a>
-                                                <a class="dropdown-item" href="#">March - June</a>
-                                                <a class="dropdown-item" href="#">June - August</a>
-                                                <a class="dropdown-item" href="#">August - November</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 grid-margin stretch-card">
-                            <div class="card tale-bg">
-                                <div class="card-people mt-auto">
-                                    <img src="~/assets/images/dashboard/people.svg" alt="people">
-                                    <div class="weather-info">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h2 class="mb-0 font-weight-normal"><i class="icon-sun me-2"></i>31<sup>C</sup></h2>
-                                            </div>
-                                            <div class="ms-2">
-                                                <h4 class="location font-weight-normal">Chicago</h4>
-                                                <h6 class="font-weight-normal">Illinois</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 grid-margin transparent">
-                            <div class="row">
-                                <div class="col-md-6 mb-4 stretch-card transparent">
-                                    <div class="card card-tale">
-                                        <div class="card-body">
-                                            <p class="mb-4">Today’s Bookings</p>
-                                            <p class="fs-30 mb-2">4006</p>
-                                            <p>10.00% (30 days)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4 stretch-card transparent">
-                                    <div class="card card-dark-blue">
-                                        <div class="card-body">
-                                            <p class="mb-4">Total Bookings</p>
-                                            <p class="fs-30 mb-2">61344</p>
-                                            <p>22.00% (30 days)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                                    <div class="card card-light-blue">
-                                        <div class="card-body">
-                                            <p class="mb-4">Number of Meetings</p>
-                                            <p class="fs-30 mb-2">34040</p>
-                                            <p>2.00% (30 days)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 stretch-card transparent">
-                                    <div class="card card-light-danger">
-                                        <div class="card-body">
-                                            <p class="mb-4">Number of Clients</p>
-                                            <p class="fs-30 mb-2">47033</p>
-                                            <p>0.22% (30 days)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="card-title">Order Details</p>
-                                    <p class="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
-                                    <div class="d-flex flex-wrap mb-5">
-                                        <div class="me-5 mt-3">
-                                            <p class="text-muted">Order value</p>
-                                            <h3 class="text-primary fs-30 font-weight-medium">12.3k</h3>
-                                        </div>
-                                        <div class="me-5 mt-3">
-                                            <p class="text-muted">Orders</p>
-                                            <h3 class="text-primary fs-30 font-weight-medium">14k</h3>
-                                        </div>
-                                        <div class="me-5 mt-3">
-                                            <p class="text-muted">Users</p>
-                                            <h3 class="text-primary fs-30 font-weight-medium">71.56%</h3>
-                                        </div>
-                                        <div class="mt-3">
-                                            <p class="text-muted">Downloads</p>
-                                            <h3 class="text-primary fs-30 font-weight-medium">34040</h3>
-                                        </div>
-                                    </div>
-                                    <canvas id="order-chart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="card-title">Sales Report</p>
-                                        <a href="#" class="text-info">View all</a>
-                                    </div>
-                                    <p class="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
-                                    <div id="sales-chart-legend" class="chartjs-legend mt-4 mb-2"></div>
-                                    <canvas id="sales-chart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 grid-margin stretch-card">
-                            <div class="card position-relative">
-                                <div class="card-body">
-                                    <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-bs-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="row">
-                                                    <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
-                                                        <div class="ml-xl-4 mt-3">
-                                                            <p class="card-title">Detailed Reports</p>
-                                                            <h1 class="text-primary">$34040</h1>
-                                                            <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                                                            <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12 col-xl-9">
-                                                        <div class="row">
-                                                            <div class="col-md-6 border-right">
-                                                                <div class="table-responsive mb-3 mb-md-0 mt-3">
-                                                                    <table class="table table-borderless report-table">
-                                                                        <tr>
-                                                                            <td class="text-muted">Illinois</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">713</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">Washington</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">583</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">Mississippi</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">924</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">California</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">664</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">Maryland</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">560</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">Alaska</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">793</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6 mt-3">
-                                                                <div class="daoughnutchart-wrapper">
-                                                                    <canvas id="north-america-chart"></canvas>
-                                                                </div>
-                                                                <div id="north-america-chart-legend">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="row">
-                                                    <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
-                                                        <div class="ml-xl-4 mt-3">
-                                                            <p class="card-title">Detailed Reports</p>
-                                                            <h1 class="text-primary">$34040</h1>
-                                                            <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                                                            <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12 col-xl-9">
-                                                        <div class="row">
-                                                            <div class="col-md-6 border-right">
-                                                                <div class="table-responsive mb-3 mb-md-0 mt-3">
-                                                                    <table class="table table-borderless report-table">
-                                                                        <tr>
-                                                                            <td class="text-muted">Illinois</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">713</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">Washington</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">583</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">Mississippi</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">924</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">California</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">664</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">Maryland</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">560</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="text-muted">Alaska</td>
-                                                                            <td class="w-100 px-0">
-                                                                                <div class="progress progress-md mx-4">
-                                                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <h5 class="font-weight-bold mb-0">793</h5>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6 mt-3">
-                                                                <div class="daoughnutchart-wrapper">
-                                                                    <canvas id="south-america-chart"></canvas>
-                                                                </div>
-                                                                <div id="south-america-chart-legend"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev" href="#detailedReports" role="button" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#detailedReports" role="button" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-7 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="card-title mb-0">Top Products</p>
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-borderless">
-                                            <thead>
-                                                <tr>
-                                                    <th>Product</th>
-                                                    <th>Price</th>
-                                                    <th>Date</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Search Engine Marketing</td>
-                                                    <td class="font-weight-bold">$362</td>
-                                                    <td>21 Sep 2018</td>
-                                                    <td class="font-weight-medium">
-                                                        <div class="badge badge-success">Completed</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Search Engine Optimization</td>
-                                                    <td class="font-weight-bold">$116</td>
-                                                    <td>13 Jun 2018</td>
-                                                    <td class="font-weight-medium">
-                                                        <div class="badge badge-success">Completed</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Display Advertising</td>
-                                                    <td class="font-weight-bold">$551</td>
-                                                    <td>28 Sep 2018</td>
-                                                    <td class="font-weight-medium">
-                                                        <div class="badge badge-warning">Pending</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Pay Per Click Advertising</td>
-                                                    <td class="font-weight-bold">$523</td>
-                                                    <td>30 Jun 2018</td>
-                                                    <td class="font-weight-medium">
-                                                        <div class="badge badge-warning">Pending</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>E-Mail Marketing</td>
-                                                    <td class="font-weight-bold">$781</td>
-                                                    <td>01 Nov 2018</td>
-                                                    <td class="font-weight-medium">
-                                                        <div class="badge badge-danger">Cancelled</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Referral Marketing</td>
-                                                    <td class="font-weight-bold">$283</td>
-                                                    <td>20 Mar 2018</td>
-                                                    <td class="font-weight-medium">
-                                                        <div class="badge badge-warning">Pending</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Social media marketing</td>
-                                                    <td class="font-weight-bold">$897</td>
-                                                    <td>26 Oct 2018</td>
-                                                    <td class="font-weight-medium">
-                                                        <div class="badge badge-success">Completed</div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">To Do Lists</h4>
-                                    <div class="list-wrapper pt-2">
-                                        <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
-                                            <li>
-                                                <div class="form-check form-check-flat">
-                                                    <label class="form-check-label">
-                                                        <input class="checkbox" type="checkbox"> Meeting with Urban Team
-                                                    </label>
-                                                </div>
-                                                <i class="remove ti-close"></i>
-                                            </li>
-                                            <li class="completed">
-                                                <div class="form-check form-check-flat">
-                                                    <label class="form-check-label">
-                                                        <input class="checkbox" type="checkbox" checked> Duplicate a project for new customer
-                                                    </label>
-                                                </div>
-                                                <i class="remove ti-close"></i>
-                                            </li>
-                                            <li>
-                                                <div class="form-check form-check-flat">
-                                                    <label class="form-check-label">
-                                                        <input class="checkbox" type="checkbox"> Project meeting with CEO
-                                                    </label>
-                                                </div>
-                                                <i class="remove ti-close"></i>
-                                            </li>
-                                            <li class="completed">
-                                                <div class="form-check form-check-flat">
-                                                    <label class="form-check-label">
-                                                        <input class="checkbox" type="checkbox" checked> Follow up of team zilla
-                                                    </label>
-                                                </div>
-                                                <i class="remove ti-close"></i>
-                                            </li>
-                                            <li>
-                                                <div class="form-check form-check-flat">
-                                                    <label class="form-check-label">
-                                                        <input class="checkbox" type="checkbox"> Level up for Antony
-                                                    </label>
-                                                </div>
-                                                <i class="remove ti-close"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="add-items d-flex mb-0 mt-2">
-                                        <input type="text" class="form-control todo-list-input" placeholder="Add new task">
-                                        <button class="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i class="icon-circle-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 stretch-card grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="card-title mb-0">Projects</p>
-                                    <div class="table-responsive">
-                                        <table class="table table-borderless">
-                                            <thead>
-                                                <tr>
-                                                    <th class="ps-0  pb-2 border-bottom">Places</th>
-                                                    <th class="border-bottom pb-2">Orders</th>
-                                                    <th class="border-bottom pb-2">Users</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="ps-0">Kentucky</td>
-                                                    <td>
-                                                        <p class="mb-0"><span class="font-weight-bold me-2">65</span>(2.15%)</p>
-                                                    </td>
-                                                    <td class="text-muted">65</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="ps-0">Ohio</td>
-                                                    <td>
-                                                        <p class="mb-0"><span class="font-weight-bold me-2">54</span>(3.25%)</p>
-                                                    </td>
-                                                    <td class="text-muted">51</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="ps-0">Nevada</td>
-                                                    <td>
-                                                        <p class="mb-0"><span class="font-weight-bold me-2">22</span>(2.22%)</p>
-                                                    </td>
-                                                    <td class="text-muted">32</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="ps-0">North Carolina</td>
-                                                    <td>
-                                                        <p class="mb-0"><span class="font-weight-bold me-2">46</span>(3.27%)</p>
-                                                    </td>
-                                                    <td class="text-muted">15</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="ps-0">Montana</td>
-                                                    <td>
-                                                        <p class="mb-0"><span class="font-weight-bold me-2">17</span>(1.25%)</p>
-                                                    </td>
-                                                    <td class="text-muted">25</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="ps-0">Nevada</td>
-                                                    <td>
-                                                        <p class="mb-0"><span class="font-weight-bold me-2">52</span>(3.11%)</p>
-                                                    </td>
-                                                    <td class="text-muted">71</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="ps-0 pb-0">Louisiana</td>
-                                                    <td class="pb-0">
-                                                        <p class="mb-0"><span class="font-weight-bold me-2">25</span>(1.32%)</p>
-                                                    </td>
-                                                    <td class="pb-0">14</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 stretch-card grid-margin">
-                            <div class="row">
-                                <div class="col-md-12 grid-margin stretch-card">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <p class="card-title">Charts</p>
-                                            <div class="charts-data">
-                                                <div class="mt-3">
-                                                    <p class="mb-0">Data 1</p>
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="progress progress-md flex-grow-1 me-4">
-                                                            <div class="progress-bar bg-inf0" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                        <p class="mb-0">5k</p>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-3">
-                                                    <p class="mb-0">Data 2</p>
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="progress progress-md flex-grow-1 me-4">
-                                                            <div class="progress-bar bg-info" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                        <p class="mb-0">1k</p>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-3">
-                                                    <p class="mb-0">Data 3</p>
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="progress progress-md flex-grow-1 me-4">
-                                                            <div class="progress-bar bg-info" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                        <p class="mb-0">992</p>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-3">
-                                                    <p class="mb-0">Data 4</p>
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="progress progress-md flex-grow-1 me-4">
-                                                            <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                        <p class="mb-0">687</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
-                                    <div class="card data-icon-card-primary">
-                                        <div class="card-body">
-                                            <p class="card-title text-white">Number of Meetings</p>
-                                            <div class="row">
-                                                <div class="col-8 text-white">
-                                                    <h3>34040</h3>
-                                                    <p class="text-white font-weight-500 mb-0">The total number of sessions within the date range.It is calculated as the sum . </p>
-                                                </div>
-                                                <div class="col-4 background-icon">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 stretch-card grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="card-title">Notifications</p>
-                                    <ul class="icon-data-list">
-                                        <li>
-                                            <div class="d-flex">
-                                                <img src="~/assets/images/faces/face1.jpg" alt="user">
-                                                <div>
-                                                    <p class="text-info mb-1">Isabella Becker</p>
-                                                    <p class="mb-0">Sales dashboard have been created</p>
-                                                    <small>9:30 am</small>
-                                                </div>
-                                            </div>
+                        <div class="col-sm-12">
+                            <div class="home-tab">
+                                <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
                                         </li>
-                                        <li>
-                                            <div class="d-flex">
-                                                <img src="~/assets/images/faces/face2.jpg" alt="user">
-                                                <div>
-                                                    <p class="text-info mb-1">Adam Warren</p>
-                                                    <p class="mb-0">You have done a great job #TW111</p>
-                                                    <small>10:30 am</small>
-                                                </div>
-                                            </div>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab" aria-selected="false">Audiences</a>
                                         </li>
-                                        <li>
-                                            <div class="d-flex">
-                                                <img src="~/assets/images/faces/face3.jpg" alt="user">
-                                                <div>
-                                                    <p class="text-info mb-1">Leonard Thornton</p>
-                                                    <p class="mb-0">Sales dashboard have been created</p>
-                                                    <small>11:30 am</small>
-                                                </div>
-                                            </div>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab" aria-selected="false">Demographics</a>
                                         </li>
-                                        <li>
-                                            <div class="d-flex">
-                                                <img src="~/assets/images/faces/face4.jpg" alt="user">
-                                                <div>
-                                                    <p class="text-info mb-1">George Morrison</p>
-                                                    <p class="mb-0">Sales dashboard have been created</p>
-                                                    <small>8:50 am</small>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex">
-                                                <img src="~/assets/images/faces/face5.jpg" alt="user">
-                                                <div>
-                                                    <p class="text-info mb-1">Ryan Cortez</p>
-                                                    <p class="mb-0">Herbs are fun and easy to grow.</p>
-                                                    <small>9:00 am</small>
-                                                </div>
-                                            </div>
+                                        <li class="nav-item">
+                                            <a class="nav-link border-0" id="more-tab" data-bs-toggle="tab" href="#more" role="tab" aria-selected="false">More</a>
                                         </li>
                                     </ul>
+                                    <div>
+                                        <div class="btn-wrapper">
+                                            <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
+                                            <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+                                            <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="card-title">Advanced Table</p>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="table-responsive">
-                                                <table id="example" class="display expandable-table" style="width:100%">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Quote#</th>
-                                                            <th>Product</th>
-                                                            <th>Business type</th>
-                                                            <th>Policy holder</th>
-                                                            <th>Premium</th>
-                                                            <th>Status</th>
-                                                            <th>Updated at</th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </thead>
-                                                </table>
+                                <div class="tab-content tab-content-basic">
+                                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="statistics-details d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <p class="statistics-title">Bounce Rate</p>
+                                                        <h3 class="rate-percentage">32.53%</h3>
+                                                        <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>-0.5%</span></p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="statistics-title">Page Views</p>
+                                                        <h3 class="rate-percentage">7,682</h3>
+                                                        <p class="text-success d-flex"><i class="mdi mdi-menu-up"></i><span>+0.1%</span></p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="statistics-title">New Sessions</p>
+                                                        <h3 class="rate-percentage">68.8</h3>
+                                                        <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                                                    </div>
+                                                    <div class="d-none d-md-block">
+                                                        <p class="statistics-title">Avg. Time on Site</p>
+                                                        <h3 class="rate-percentage">2m:35s</h3>
+                                                        <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
+                                                    </div>
+                                                    <div class="d-none d-md-block">
+                                                        <p class="statistics-title">New Sessions</p>
+                                                        <h3 class="rate-percentage">68.8</h3>
+                                                        <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                                                    </div>
+                                                    <div class="d-none d-md-block">
+                                                        <p class="statistics-title">Avg. Time on Site</p>
+                                                        <h3 class="rate-percentage">2m:35s</h3>
+                                                        <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-8 d-flex flex-column">
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="d-sm-flex justify-content-between align-items-start">
+                                                                    <div>
+                                                                        <h4 class="card-title card-title-dash">Performance Line Chart</h4>
+                                                                        <h5 class="card-subtitle card-subtitle-dash">Lorem Ipsum is simply dummy text of the printing</h5>
+                                                                    </div>
+                                                                    <div id="performanceLine-legend"></div>
+                                                                </div>
+                                                                <div class="chartjs-wrapper mt-4">
+                                                                    <canvas id="performanceLine" width=""></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 d-flex flex-column">
+                                                <div class="row flex-grow">
+                                                    <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+                                                        <div class="card bg-primary card-rounded">
+                                                            <div class="card-body pb-0">
+                                                                <h4 class="card-title card-title-dash text-white mb-4">Status Summary</h4>
+                                                                <div class="row">
+                                                                    <div class="col-sm-4">
+                                                                        <p class="status-summary-ight-white mb-1">Closed Value</p>
+                                                                        <h2 class="text-info">357</h2>
+                                                                    </div>
+                                                                    <div class="col-sm-8">
+                                                                        <div class="status-summary-chart-wrapper pb-4">
+                                                                            <canvas id="status-summary"></canvas>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <div class="d-flex justify-content-between align-items-center mb-2 mb-sm-0">
+                                                                            <div class="circle-progress-width">
+                                                                                <div id="totalVisitors" class="progressbar-js-circle pr-2"></div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <p class="text-small mb-2">Total Visitors</p>
+                                                                                <h4 class="mb-0 fw-bold">26.80%</h4>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div class="d-flex justify-content-between align-items-center">
+                                                                            <div class="circle-progress-width">
+                                                                                <div id="visitperday" class="progressbar-js-circle pr-2"></div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <p class="text-small mb-2">Visits per day</p>
+                                                                                <h4 class="mb-0 fw-bold">9065</h4>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-8 d-flex flex-column">
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="d-sm-flex justify-content-between align-items-start">
+                                                                    <div>
+                                                                        <h4 class="card-title card-title-dash">Market Overview</h4>
+                                                                        <p class="card-subtitle card-subtitle-dash">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="dropdown">
+                                                                            <button class="btn btn-light dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> This month </button>
+                                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                                                <h6 class="dropdown-header">Settings</h6>
+                                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                                                <div class="dropdown-divider"></div>
+                                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-sm-flex align-items-center mt-1 justify-content-between">
+                                                                    <div class="d-sm-flex align-items-center mt-4 justify-content-between">
+                                                                        <h2 class="me-2 fw-bold">$36,2531.00</h2>
+                                                                        <h4 class="me-2">USD</h4>
+                                                                        <h4 class="text-success">(+1.37%)</h4>
+                                                                    </div>
+                                                                    <div class="me-3">
+                                                                        <div id="marketingOverview-legend"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chartjs-bar-wrapper mt-3">
+                                                                    <canvas id="marketingOverview"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded table-darkBGImg">
+                                                            <div class="card-body">
+                                                                <div class="col-sm-8">
+                                                                    <h3 class="text-white upgrade-info mb-0"> Enhance your <span class="fw-bold">Campaign</span> for better outreach </h3>
+                                                                    <a href="#" class="btn btn-info upgrade-btn">Upgrade Account!</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="d-sm-flex justify-content-between align-items-start">
+                                                                    <div>
+                                                                        <h4 class="card-title card-title-dash">Pending Requests</h4>
+                                                                        <p class="card-subtitle card-subtitle-dash">You have 50+ new requests</p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add new member</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-responsive  mt-1">
+                                                                    <table class="table select-table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>
+                                                                                    <div class="form-check form-check-flat mt-0">
+                                                                                        <label class="form-check-label">
+                                                                                            <input type="checkbox" class="form-check-input" aria-checked="false" id="check-all"><i class="input-helper"></i>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </th>
+                                                                                <th>Customer</th>
+                                                                                <th>Company</th>
+                                                                                <th>Progress</th>
+                                                                                <th>Status</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check form-check-flat mt-0">
+                                                                                        <label class="form-check-label">
+                                                                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="d-flex ">
+                                                                                        <img src="assets/images/faces/face1.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>Brandon Washington</h6>
+                                                                                            <p>Head admin</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>Company name 1</h6>
+                                                                                    <p>company type</p>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                                                                            <p class="text-success">79%</p>
+                                                                                            <p>85/162</p>
+                                                                                        </div>
+                                                                                        <div class="progress progress-md">
+                                                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="badge badge-opacity-warning">In progress</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check form-check-flat mt-0">
+                                                                                        <label class="form-check-label">
+                                                                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="d-flex">
+                                                                                        <img src="assets/images/faces/face2.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>Laura Brooks</h6>
+                                                                                            <p>Head admin</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>Company name 1</h6>
+                                                                                    <p>company type</p>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                                                                            <p class="text-success">65%</p>
+                                                                                            <p>85/162</p>
+                                                                                        </div>
+                                                                                        <div class="progress progress-md">
+                                                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="badge badge-opacity-warning">In progress</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check form-check-flat mt-0">
+                                                                                        <label class="form-check-label">
+                                                                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="d-flex">
+                                                                                        <img src="assets/images/faces/face3.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>Wayne Murphy</h6>
+                                                                                            <p>Head admin</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>Company name 1</h6>
+                                                                                    <p>company type</p>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                                                                            <p class="text-success">65%</p>
+                                                                                            <p>85/162</p>
+                                                                                        </div>
+                                                                                        <div class="progress progress-md">
+                                                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="badge badge-opacity-warning">In progress</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check form-check-flat mt-0">
+                                                                                        <label class="form-check-label">
+                                                                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="d-flex">
+                                                                                        <img src="assets/images/faces/face4.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>Matthew Bailey</h6>
+                                                                                            <p>Head admin</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>Company name 1</h6>
+                                                                                    <p>company type</p>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                                                                            <p class="text-success">65%</p>
+                                                                                            <p>85/162</p>
+                                                                                        </div>
+                                                                                        <div class="progress progress-md">
+                                                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="badge badge-opacity-danger">Pending</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check form-check-flat mt-0">
+                                                                                        <label class="form-check-label">
+                                                                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="d-flex">
+                                                                                        <img src="assets/images/faces/face5.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>Katherine Butler</h6>
+                                                                                            <p>Head admin</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <h6>Company name 1</h6>
+                                                                                    <p>company type</p>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                                                                            <p class="text-success">65%</p>
+                                                                                            <p>85/162</p>
+                                                                                        </div>
+                                                                                        <div class="progress progress-md">
+                                                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="badge badge-opacity-success">Completed</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row flex-grow">
+                                                    <div class="col-md-6 col-lg-6 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body card-rounded">
+                                                                <h4 class="card-title  card-title-dash">Recent Events</h4>
+                                                                <div class="list align-items-center border-bottom py-2">
+                                                                    <div class="wrapper w-100">
+                                                                        <p class="mb-2 fw-medium"> Change in Directors </p>
+                                                                        <div class="d-flex justify-content-between align-items-center">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="mdi mdi-calendar text-muted me-1"></i>
+                                                                                <p class="mb-0 text-small text-muted">Mar 14, 2019</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="list align-items-center border-bottom py-2">
+                                                                    <div class="wrapper w-100">
+                                                                        <p class="mb-2 fw-medium"> Other Events </p>
+                                                                        <div class="d-flex justify-content-between align-items-center">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="mdi mdi-calendar text-muted me-1"></i>
+                                                                                <p class="mb-0 text-small text-muted">Mar 14, 2019</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="list align-items-center border-bottom py-2">
+                                                                    <div class="wrapper w-100">
+                                                                        <p class="mb-2 fw-medium"> Quarterly Report </p>
+                                                                        <div class="d-flex justify-content-between align-items-center">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="mdi mdi-calendar text-muted me-1"></i>
+                                                                                <p class="mb-0 text-small text-muted">Mar 14, 2019</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="list align-items-center border-bottom py-2">
+                                                                    <div class="wrapper w-100">
+                                                                        <p class="mb-2 fw-medium"> Change in Directors </p>
+                                                                        <div class="d-flex justify-content-between align-items-center">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="mdi mdi-calendar text-muted me-1"></i>
+                                                                                <p class="mb-0 text-small text-muted">Mar 14, 2019</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="list align-items-center pt-3">
+                                                                    <div class="wrapper w-100">
+                                                                        <p class="mb-0">
+                                                                            <a href="#" class="fw-bold text-primary">Show all <i class="mdi mdi-arrow-right ms-2"></i></a>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                                                    <h4 class="card-title card-title-dash">Activities</h4>
+                                                                    <p class="mb-0">20 finished, 5 remaining</p>
+                                                                </div>
+                                                                <ul class="bullet-line-list">
+                                                                    <li>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div><span class="text-light-green">Ben Tossell</span> assign you a task</div>
+                                                                            <p>Just now</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div><span class="text-light-green">Oliver Noah</span> assign you a task</div>
+                                                                            <p>1h</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div><span class="text-light-green">Jack William</span> assign you a task</div>
+                                                                            <p>1h</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div><span class="text-light-green">Leo Lucas</span> assign you a task</div>
+                                                                            <p>1h</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div><span class="text-light-green">Thomas Henry</span> assign you a task</div>
+                                                                            <p>1h</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div><span class="text-light-green">Ben Tossell</span> assign you a task</div>
+                                                                            <p>1h</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div><span class="text-light-green">Ben Tossell</span> assign you a task</div>
+                                                                            <p>1h</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="list align-items-center pt-3">
+                                                                    <div class="wrapper w-100">
+                                                                        <p class="mb-0">
+                                                                            <a href="#" class="fw-bold text-primary">Show all <i class="mdi mdi-arrow-right ms-2"></i></a>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 d-flex flex-column">
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="d-flex justify-content-between align-items-center">
+                                                                            <h4 class="card-title card-title-dash">Todo list</h4>
+                                                                            <div class="add-items d-flex mb-0">
+                                                                                <!-- <input type="text" class="form-control todo-list-input" placeholder="What do you need to do today?"> -->
+                                                                                <button class="add btn btn-icons btn-rounded btn-primary todo-list-add-btn text-white me-0 pl-12p"><i class="mdi mdi-plus"></i></button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="list-wrapper">
+                                                                            <ul class="todo-list todo-list-rounded">
+                                                                                <li class="d-block">
+                                                                                    <div class="form-check w-100">
+                                                                                        <label class="form-check-label">
+                                                                                            <input class="checkbox" type="checkbox"> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
+                                                                                        </label>
+                                                                                        <div class="d-flex mt-2">
+                                                                                            <div class="ps-4 text-small me-3">24 June 2020</div>
+                                                                                            <div class="badge badge-opacity-warning me-3">Due tomorrow</div>
+                                                                                            <i class="mdi mdi-flag ms-2 flag-color"></i>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="d-block">
+                                                                                    <div class="form-check w-100">
+                                                                                        <label class="form-check-label">
+                                                                                            <input class="checkbox" type="checkbox"> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
+                                                                                        </label>
+                                                                                        <div class="d-flex mt-2">
+                                                                                            <div class="ps-4 text-small me-3">23 June 2020</div>
+                                                                                            <div class="badge badge-opacity-success me-3">Done</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="form-check w-100">
+                                                                                        <label class="form-check-label">
+                                                                                            <input class="checkbox" type="checkbox"> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
+                                                                                        </label>
+                                                                                        <div class="d-flex mt-2">
+                                                                                            <div class="ps-4 text-small me-3">24 June 2020</div>
+                                                                                            <div class="badge badge-opacity-success me-3">Done</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="border-bottom-0">
+                                                                                    <div class="form-check w-100">
+                                                                                        <label class="form-check-label">
+                                                                                            <input class="checkbox" type="checkbox"> Lorem Ipsum is simply dummy text of the printing <i class="input-helper rounded"></i>
+                                                                                        </label>
+                                                                                        <div class="d-flex mt-2">
+                                                                                            <div class="ps-4 text-small me-3">24 June 2020</div>
+                                                                                            <div class="badge badge-opacity-danger me-3">Expired</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                            <h4 class="card-title card-title-dash">Type By Amount</h4>
+                                                                        </div>
+                                                                        <div>
+                                                                            <canvas class="my-auto" id="doughnutChart"></canvas>
+                                                                        </div>
+                                                                        <div id="doughnutChart-legend" class="mt-5 text-center"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                            <div>
+                                                                                <h4 class="card-title card-title-dash">Leave Report</h4>
+                                                                            </div>
+                                                                            <div>
+                                                                                <div class="dropdown">
+                                                                                    <button class="btn btn-light dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Month Wise </button>
+                                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                                                                        <h6 class="dropdown-header">week Wise</h6>
+                                                                                        <a class="dropdown-item" href="#">Year Wise</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-3">
+                                                                            <canvas id="leaveReport"></canvas>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                            <div>
+                                                                                <h4 class="card-title card-title-dash">Top Performer</h4>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-3">
+                                                                            <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
+                                                                                <div class="d-flex">
+                                                                                    <img class="img-sm rounded-10" src="assets/images/faces/face1.jpg" alt="profile">
+                                                                                    <div class="wrapper ms-3">
+                                                                                        <p class="ms-1 mb-1 fw-bold">Brandon Washington</p>
+                                                                                        <small class="text-muted mb-0">162543</small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="text-muted text-small"> 1h ago </div>
+                                                                            </div>
+                                                                            <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
+                                                                                <div class="d-flex">
+                                                                                    <img class="img-sm rounded-10" src="assets/images/faces/face2.jpg" alt="profile">
+                                                                                    <div class="wrapper ms-3">
+                                                                                        <p class="ms-1 mb-1 fw-bold">Wayne Murphy</p>
+                                                                                        <small class="text-muted mb-0">162543</small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="text-muted text-small"> 1h ago </div>
+                                                                            </div>
+                                                                            <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
+                                                                                <div class="d-flex">
+                                                                                    <img class="img-sm rounded-10" src="assets/images/faces/face3.jpg" alt="profile">
+                                                                                    <div class="wrapper ms-3">
+                                                                                        <p class="ms-1 mb-1 fw-bold">Katherine Butler</p>
+                                                                                        <small class="text-muted mb-0">162543</small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="text-muted text-small"> 1h ago </div>
+                                                                            </div>
+                                                                            <div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
+                                                                                <div class="d-flex">
+                                                                                    <img class="img-sm rounded-10" src="assets/images/faces/face4.jpg" alt="profile">
+                                                                                    <div class="wrapper ms-3">
+                                                                                        <p class="ms-1 mb-1 fw-bold">Matthew Bailey</p>
+                                                                                        <small class="text-muted mb-0">162543</small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="text-muted text-small"> 1h ago </div>
+                                                                            </div>
+                                                                            <div class="wrapper d-flex align-items-center justify-content-between pt-2">
+                                                                                <div class="d-flex">
+                                                                                    <img class="img-sm rounded-10" src="assets/images/faces/face5.jpg" alt="profile">
+                                                                                    <div class="wrapper ms-3">
+                                                                                        <p class="ms-1 mb-1 fw-bold">Rafell John</p>
+                                                                                        <small class="text-muted mb-0">Alaska, USA</small>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="text-muted text-small"> 1h ago </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1037,8 +1043,7 @@
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023. Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
-                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ms-1"></i></span>
+                            <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Copyright © 2023. All rights reserved.</span>
                     </div>
                 </footer>
                 <!-- partial -->
@@ -1049,16 +1054,19 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
+    <script src="~/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="~/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <script src="~/assets/vendors/chart.js/chart.umd.js"></script>
-    <!-- <script src="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script> -->
+    <script src="~/assets/vendors/progressbar.js/progressbar.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
     <script src="~/assets/js/off-canvas.js"></script>
     <script src="~/assets/js/template.js"></script>
+    <script src="~/assets/js/settings.js"></script>
+    <script src="~/assets/js/hoverable-collapse.js"></script>
+    <script src="~/assets/js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="~/assets/js/jquery.cookie.js" type="text/javascript"></script>

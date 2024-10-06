@@ -11,7 +11,7 @@
     $("#settings-trigger").on("click" , function(){
       $("#theme-settings").toggleClass("open");
     });
- 
+
 
     //background constants
     var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink";
@@ -80,6 +80,30 @@
       $(".navbar").removeClass(navbar_classes);
       $(".tiles").removeClass("selected");
       $(this).addClass("selected");
+    });
+    $(".tiles.default").on("click" , function(){
+      $(".navbar").removeClass(navbar_classes);
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+    $(".color-theme.default").click(function(){
+      $(".color-theme.default").attr({
+        "href" : "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-light/index.html",
+        "title" : "Light"
+      });
+    });
+    $(".color-theme.dark").click(function(){
+      $(".color-theme.dark").attr({
+        "href" : "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-dark/index.html",
+        "title" : "Dark"
+      });
+    });
+    $(".color-theme.brown").click(function(){
+      $(".color-theme.brown").attr({
+        "href" : "https://www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-brown/index.html",
+        "title" : "Brown"
+      });
     });
   });
 })(jQuery);
